@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--App Name-->
+    <style name="Attendance">
+        <item name="android:textSize">35sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:fontFamily">@font/sticknobills_semibold</item>
+    </style>
+</resources>

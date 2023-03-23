@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Pract5</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+
+    <string name="warning_fill">Fill, please</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="e_mail">e-mail</string>
+    <string name="your_phone">Your phone</string>
+    <string name="name_optional">Name</string>
+    <string name="surname_optional">Surname</string>
+
+    <string name="list">List</string>
+    <string name="calendar">Calendar</string>
+    <string name="online">Онлайн</string>
+    <string name="offline">Оффлайн</string>
+    <string name="notification">Вызвать уведомление</string>
+
+    <string name="channel_name">calendar_notify</string>
+    <string name="channel_description">calendar_notify_desc</string>
+
+    <string name="splash_corners">SplashCorners</string>
+
+    <string name="signin_text">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="activity_link_signup">Have not an account yet? <u>Sign Up</u></string>
+
+    <string name="signup_text">Sign Up</string>
+    <string name="user_name">Name</string>
+    <string name="activity_link_signin">Already have an account? <u>Sign In</u></string>
+</resources>
