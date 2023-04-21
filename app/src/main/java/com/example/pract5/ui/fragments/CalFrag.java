@@ -1,10 +1,13 @@
-package com.example.pract5;
+package com.example.pract5.ui.fragments;
+
+import static java.net.Proxy.Type.HTTP;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +19,8 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.pract5.CalOpt;
+import com.example.pract5.R;
 import com.example.pract5.databinding.FragCalBinding;
 
 public class CalFrag extends Fragment {
@@ -41,14 +46,20 @@ public class CalFrag extends Fragment {
             Intent intent = new Intent(requireContext(), CalOpt.class);
             requireActivity().startService(intent);
         });
+        binding.shareBtn.setOnClickListener(view1 -> {
+            Intent textIntent = new Intent(Intent.ACTION_SEND);
+            textIntent.setType("text/plain");
+            textIntent.putExtra(Intent.EXTRA_TEXT, "Присоединяйтесь к Журналу");
+            requireActivity().startActivity(textIntent);
+        });
     }
 
 
     private void showNotification() {
         Notification notification = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_calendar)
-                .setContentText("You will be redirected to subject page")
-                .setContentTitle("Successful")
+                .setContentText("Вы будете перенаправлены на страницу предмета")
+                .setContentTitle("Успешно")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .build();
 
