@@ -9,7 +9,7 @@
     android:background="@color/splash_background"
     android:fillViewport="true"
     android:scrollbars="none"
-    tools:context=".SinFrag">
+    tools:context=".ui.fragments.SinFrag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
