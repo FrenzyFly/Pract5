@@ -7,12 +7,21 @@
 
     <fragment
         android:id="@+id/fragmentHackathonsList"
-        android:name="com.example.pract5.SublistFrag"
+        android:name="com.example.pract5.ui.fragments.SublistFrag"
         android:label="HackathonsListFragment"
-        tools:layout="@layout/frag_sublist" />
+        tools:layout="@layout/frag_sublist" >
+        <action
+            android:id="@+id/action_fragmentHackathonsList_to_hackathonItemList"
+            app:destination="@id/hackathonItemList" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentCalendar"
-        android:name="com.example.pract5.CalFrag"
+        android:name="com.example.pract5.ui.fragments.CalFrag"
         android:label="CalendarFragment"
         tools:layout="@layout/frag_cal" />
+    <fragment
+        android:id="@+id/hackathonItemList"
+        android:name="com.example.pract5.ui.fragments.SubItemList"
+        android:label="HackathonItemList"
+        tools:layout="@layout/frag_sub_item_list"/>
 </navigation>
