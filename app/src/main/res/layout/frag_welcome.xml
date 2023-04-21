@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/splash_background"
     android:orientation="vertical"
-    tools:context=".WelcomeFrag"
+    tools:context=".ui.fragments.WelcomeFrag"
     android:fillViewport="true">
 
     <ImageView
