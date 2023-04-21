@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">Pract5</string>
-    <string name="hint_login">Login</string>
-    <string name="hint_password">Password</string>
+    <string name="app_name">Журнал</string>
+    <string name="hint_login">Войти</string>
+    <string name="hint_password">Пароль</string>
 
-    <string name="warning_fill">Fill, please</string>
-    <string name="confirm_password">Confirm password</string>
-    <string name="e_mail">e-mail</string>
-    <string name="your_phone">Your phone</string>
-    <string name="name_optional">Name</string>
-    <string name="surname_optional">Surname</string>
+    <string name="warning_fill">Обязательное поле</string>
+    <string name="confirm_password">Подтвердить пароль</string>
+    <string name="e_mail">Эл. почта</string>
+    <string name="your_phone">Номер телефона</string>
+    <string name="name_optional">Имя</string>
+    <string name="surname_optional">Фамилия</string>
 
-    <string name="list">List</string>
-    <string name="calendar">Calendar</string>
+    <string name="list">Список</string>
+    <string name="calendar">Календарь</string>
     <string name="online">Онлайн</string>
     <string name="offline">Оффлайн</string>
     <string name="notification">Вызвать уведомление</string>
@@ -21,13 +21,19 @@
 
     <string name="splash_corners">SplashCorners</string>
 
-    <string name="signin_text">Sign In</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="activity_link_signup">Have not an account yet? <u>Sign Up</u></string>
+    <string name="signin_text">Вход</string>
+    <string name="email">Эл. почта</string>
+    <string name="password">Пароль</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="activity_link_signup">Нет аккаунта? <u>Зарегистрироваться</u></string>
 
-    <string name="signup_text">Sign Up</string>
-    <string name="user_name">Name</string>
-    <string name="activity_link_signin">Already have an account? <u>Sign In</u></string>
+    <string name="signup_text">Регистрация</string>
+    <string name="user_name">Имя</string>
+    <string name="activity_link_signin">Есть аккаунт? <u>Войти</u></string>
+    <string name="share">Поделиться</string>
+    <string name="registration_data">Дата:</string>
+    <string name="languages">Преподаватель:</string>
+    <string name="format">Оценка:</string>
+    <string name="necessarily">Обязательно</string>
+    <string name="login_exists">Логин уже занят</string>
 </resources>

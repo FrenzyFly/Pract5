@@ -2,12 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/start_nav_graph"
-    app:startDestination="@id/greetingFragment">
+    android:id="@+id/start_nav_graph">
 
     <fragment
         android:id="@+id/greetingFragment"
-        android:name="com.example.pract5.WelcomeFrag"
+        android:name="com.example.pract5.ui.fragments.WelcomeFrag"
         android:label="fragment_greeting"
         tools:layout="@layout/frag_welcome">
         <action
@@ -19,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.pract5.SupFrag"
+        android:name="com.example.pract5.ui.fargments.SupFrag"
         android:label="fragment_registration"
         tools:layout="@layout/frag_sup">
         <action
@@ -28,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.pract5.SinFrag"
+        android:name="com.example.pract5.ui.fragments.SinFrag"
         android:label="fragment_login"
         tools:layout="@layout/frag_sin">
         <action
@@ -40,7 +39,8 @@
     </fragment>
     <fragment
         android:id="@+id/bottomNavFragment"
-        android:name="com.example.pract5.BotmenFrag"
+        android:name="com.example.pract5.ui.fragments.BotmenFrag"
         android:label="BottomNavFragment"
         tools:layout="@layout/frag_botmen" />
 </navigation>
+

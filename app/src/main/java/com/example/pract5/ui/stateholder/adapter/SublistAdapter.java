@@ -1,6 +1,7 @@
-package com.example.pract5.model;
+package com.example.pract5.ui.stateholder.adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pract5.R;
 import com.example.pract5.databinding.ItemSublistBinding;
+import com.example.pract5.data.db.entities.SublistItem;
 
 import java.util.List;
 
@@ -15,8 +17,14 @@ public class SublistAdapter extends RecyclerView.Adapter<SublistAdapter.ViewHold
 
     private final List<SublistItem> sublistItems;
 
-    public SublistAdapter(List<SublistItem> sublistItems) {
-        this.sublistItems = sublistItems;
+    public OnSubItemListClickListener onSubItemListClickListener = null;
+
+    public interface OnSubItemListClickListener {
+        void onSubItemListClickListener(int position);
+    }
+
+    public SublistAdapter(List<SublistItem> hackathonListItems) {
+        this.sublistItems = hackathonListItems;
     }
 
     @NonNull
@@ -33,10 +41,17 @@ public class SublistAdapter extends RecyclerView.Adapter<SublistAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SublistItem item = sublistItems.get(position);
         holder.binding.name.setText(item.getName());
-        holder.binding.classic.setText(item.getClassic());
-        holder.binding.timeStartEnd.setText(item.getTimeStartEnd());
-        holder.binding.date.setText(item.getDate());
-        holder.binding.teacher.setText(item.getTeacher());
+        holder.binding.company.setText(item.getClassic());
+        holder.binding.dateStartEnd.setText(item.getDate());
+        holder.binding.languages.setText(item.getTeacher());
+        holder.binding.status.setText(item.getMark());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onSubItemListClickListener.onSubItemListClickListener(holder.getAdapterPosition());
+            }
+        });
     }
 
     @Override
