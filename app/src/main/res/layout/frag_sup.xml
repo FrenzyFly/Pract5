@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/splash_background"
     android:scrollbars="none"
-    tools:context=".SupFrag">
+    tools:context=".ui.fragments.SupFrag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
