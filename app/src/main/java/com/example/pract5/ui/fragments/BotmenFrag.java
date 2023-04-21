@@ -1,4 +1,4 @@
-package com.example.pract5;
+package com.example.pract5.ui.fragments;
 
 import static androidx.navigation.Navigation.findNavController;
 
@@ -10,13 +10,22 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+import com.example.pract5.R;
 import com.example.pract5.databinding.FragBotmenBinding;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class BotmenFrag extends Fragment {
 
