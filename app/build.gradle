@@ -6,9 +6,10 @@ android {
     namespace 'com.example.pract5'
     compileSdk 33
 
-    buildFeatures {
-        dataBinding true
+    dataBinding {
+        enabled = true
     }
+
     defaultConfig {
         applicationId "com.example.pract5"
         minSdk 23

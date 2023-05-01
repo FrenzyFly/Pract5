@@ -25,11 +25,11 @@
     <string name="email">Эл. почта</string>
     <string name="password">Пароль</string>
     <string name="forgot_password">Забыли пароль?</string>
-    <string name="activity_link_signup">Нет аккаунта? <u>Зарегистрироваться</u></string>
+    <string name="activity_link_signup">Нет аккаунта? Зарегистрироваться</string>
 
     <string name="signup_text">Регистрация</string>
     <string name="user_name">Имя</string>
-    <string name="activity_link_signin">Есть аккаунт? <u>Войти</u></string>
+    <string name="activity_link_signin">Есть аккаунт? Войти</string>
     <string name="share">Поделиться</string>
     <string name="registration_data">Дата:</string>
     <string name="languages">Преподаватель:</string>
