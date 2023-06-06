@@ -1,4 +1,4 @@
-package com.example.pract5.ui.fragments;
+package com.example.pract5;
 
 import android.content.Context;
 import android.content.Intent;

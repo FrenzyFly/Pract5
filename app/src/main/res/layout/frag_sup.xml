@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/splash_background"
     android:scrollbars="none"
-    tools:context=".ui.fragments.SupFrag">
+    tools:context=".SupFrag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:text="@string/signup_text"
-            android:textColor="@color/onBackground"
+            android:textColor="@color/black"
             android:textSize="@dimen/title_text"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/etLoginLayout"
@@ -56,13 +56,13 @@
             app:layout_constraintTop_toBottomOf="@+id/title">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etLogin"
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_login"
                 android:inputType="text"
                 android:maxLength="15"
-                android:textColor="@color/onBackground" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,7 +76,7 @@
             app:layout_constraintBottom_toTopOf="@+id/etConfirmPasswordLayout"
             app:layout_constraintTop_toBottomOf="@+id/etLoginLayout"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/onBackground">
+            app:passwordToggleTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
@@ -85,7 +85,7 @@
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:maxLength="32"
-                android:textColor="@color/onBackground" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,10 +96,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:counterTextColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/etEmailLayout"
+            app:layout_constraintBottom_toTopOf="@+id/etNumberLayout"
             app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/onBackground">
+            app:passwordToggleTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etConfirmPassword"
@@ -108,28 +108,7 @@
                 android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:maxLength="32"
-                android:textColor="@color/onBackground" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etEmailLayout"
-            style="@style/MyTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:counterTextColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/etNumberLayout"
-            app:layout_constraintTop_toBottomOf="@+id/etConfirmPasswordLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/e_mail"
-                android:inputType="textEmailAddress"
-                android:maxLength="32"
-                android:textColor="@color/onBackground" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,9 +120,9 @@
             android:layout_marginTop="16dp"
             app:counterTextColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/etNameLayout"
-            app:layout_constraintTop_toBottomOf="@+id/etEmailLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etConfirmPasswordLayout"
             app:prefixText="+7"
-            app:prefixTextColor="@color/onBackground">
+            app:prefixTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etNumber"
@@ -152,7 +131,7 @@
                 android:hint="@string/your_phone"
                 android:inputType="phone"
                 android:maxLength="32"
-                android:textColor="@color/onBackground" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,8 +141,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             app:counterTextColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/etSurnameLayout"
+            app:layout_constraintBottom_toTopOf="@+id/supButton"
             app:layout_constraintTop_toBottomOf="@+id/etNumberLayout" >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -173,29 +153,7 @@
                 android:hint="@string/name_optional"
                 android:inputType="textPersonName"
                 android:maxLength="32"
-                android:textColor="@color/onBackground" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etSurnameLayout"
-            style="@style/MyTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
-            app:counterTextColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/supButton"
-            app:layout_constraintTop_toBottomOf="@+id/etNameLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSurname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/surname_optional"
-                android:inputType="textPersonName"
-                android:maxLength="32"
-                android:textColor="@color/onBackground" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -203,6 +161,7 @@
             android:id="@+id/supButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/round_button"
             android:paddingHorizontal="64dp"

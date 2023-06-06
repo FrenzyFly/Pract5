@@ -1,9 +1,5 @@
-package com.example.pract5.ui.fragments;
+package com.example.pract5;
 
-import static androidx.core.content.PermissionChecker.checkSelfPermission;
-
-import android.Manifest;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,16 +10,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.PermissionChecker;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
-import com.example.pract5.R;
 import com.example.pract5.databinding.FragSinBinding;
-import com.example.pract5.ui.stateholder.viewmodel.SinVmod;
 
 public class SinFrag extends Fragment {
 
@@ -58,30 +50,10 @@ public class SinFrag extends Fragment {
     }
 
     private void setButtonClickListeners() {
-        binding.sinButton.setOnClickListener(view -> {
-            if (viewModel.sinAcc(
-                    binding.etLogin.getText().toString(),
-                    binding.etPassword.getText().toString(),
-                    allowedPermission()
-            )
-            ) {
-                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_bottomNavFragment);
-            }
-        });
         binding.sup.setOnClickListener(
                 view ->
                         Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registrationFragment)
         );
-    }
-
-    private boolean allowedPermission() {
-        if (checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PermissionChecker.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-            return false;
-        }
     }
 
     private void scrollDownWhenOpenKeyboard() {

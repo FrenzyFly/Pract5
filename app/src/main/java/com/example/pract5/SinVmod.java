@@ -1,24 +1,11 @@
-package com.example.pract5.ui.stateholder.viewmodel;
+package com.example.pract5;
 
-import static androidx.core.content.PermissionChecker.checkSelfPermission;
-
-import android.Manifest;
 import android.app.Application;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.PermissionChecker;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
-
-import com.example.pract5.data.repositories.UserAccRep;
-import com.example.pract5.data.models.SinAccount;
-import com.example.pract5.data.protocols.UserAccProtocol;
 
 public class SinVmod extends AndroidViewModel {
 

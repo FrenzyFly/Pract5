@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/splash_background"
     android:orientation="vertical"
-    tools:context=".ui.fragments.WelcomeFrag"
+    tools:context=".WelcomeFrag"
     android:fillViewport="true">
 
     <ImageView
@@ -28,6 +28,28 @@
         android:src="@drawable/ic_welscreen_corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_corner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:contentDescription="@string/splash_corners"
+        android:rotation="90"
+        android:src="@drawable/ic_welscreen_corners"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_corner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:contentDescription="@string/splash_corners"
+        android:rotation="270"
+        android:src="@drawable/ic_welscreen_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/attendance"

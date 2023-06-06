@@ -1,7 +1,4 @@
-package com.example.pract5.data.protocols;
-
-import com.example.pract5.data.models.SinAccount;
-import com.example.pract5.data.models.SupAccount;
+package com.example.pract5;
 
 public interface UserAccProtocol {
     boolean createAccount(SupAccount supAcc);

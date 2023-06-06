@@ -9,7 +9,7 @@
     android:background="@color/splash_background"
     android:fillViewport="true"
     android:scrollbars="none"
-    tools:context=".ui.fragments.SinFrag">
+    tools:context=".SinFrag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:text="@string/signin_text"
-            android:textColor="@color/onBackground"
+            android:textColor="@color/black"
             android:textSize="@dimen/title_text"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/etLoginLayout"

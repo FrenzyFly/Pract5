@@ -1,21 +1,13 @@
-package com.example.pract5.ui;
-
-import static androidx.navigation.fragment.FragmentKt.findNavController;
+package com.example.pract5;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.pract5.R;
 import com.example.pract5.databinding.ActivityStartBinding;
-import com.example.pract5.ui.fragments.SinFrag;
 
 public class MainActivity extends AppCompatActivity {
 

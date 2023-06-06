@@ -1,4 +1,4 @@
-package com.example.pract5.ui.fragments;
+package com.example.pract5;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,9 +16,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
-import com.example.pract5.R;
 import com.example.pract5.databinding.FragSupBinding;
-import com.example.pract5.ui.stateholder.viewmodel.SupVmod;
 
 public class SupFrag extends Fragment {
 
@@ -48,15 +46,13 @@ public class SupFrag extends Fragment {
         SharedPreferences sharedPrefRead =
                 requireActivity().getPreferences(Context.MODE_PRIVATE);
         String loginSP = sharedPrefRead.getString(SHARED_PREF_LOGIN, "");
-        binding.etLogin.setText(loginSP);
+        binding.etEmail.setText(loginSP);
 
         binding.supButton.setOnClickListener(view1 -> {
-            String login = binding.etLogin.getText().toString();
+            String login = binding.etEmail.getText().toString();
             String pass = binding.etPassword.getText().toString();
-            String email = binding.etEmail.getText().toString();
             String phone = binding.etNumber.getText().toString();
             String name = binding.etName.getText().toString();
-            String surname = binding.etSurname.getText().toString();
 
             // write
             SharedPreferences sharedPrefWrite =
@@ -70,10 +66,8 @@ public class SupFrag extends Fragment {
             if (viewModel.createAccount(
                     login,
                     pass,
-                    email,
                     phone,
-                    name,
-                    surname
+                    name
             )) {
                 Bundle bundle = new Bundle();
                 bundle.putString(KEY_LOGIN, login);
@@ -89,7 +83,7 @@ public class SupFrag extends Fragment {
             @Override
             public void onChanged(Boolean aBoolean) {
                 String message = aBoolean ? getString(R.string.necessarily) : null;
-                binding.etLogin.setError(message);
+                binding.etEmail.setError(message);
             }
         });
         viewModel.errorInputPass().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
@@ -97,13 +91,6 @@ public class SupFrag extends Fragment {
             public void onChanged(Boolean aBoolean) {
                 String message = aBoolean ? getString(R.string.necessarily) : null;
                 binding.etPassword.setError(message);
-            }
-        });
-        viewModel.errorInputEmail().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                String message = aBoolean ? getString(R.string.necessarily) : null;
-                binding.etEmail.setError(message);
             }
         });
         viewModel.errorInputPhone().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
@@ -119,7 +106,7 @@ public class SupFrag extends Fragment {
         viewModel.errorInputLogin().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {
-                binding.etLogin.addTextChangedListener(new TextWatcher() {
+                binding.etEmail.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     }
@@ -141,20 +128,6 @@ public class SupFrag extends Fragment {
                     @Override
                     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                         viewModel.resetErrorInputPass();
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                    }
-                });
-                binding.etEmail.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        viewModel.resetErrorInputEmail();
                     }
 
                     @Override

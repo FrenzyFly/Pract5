@@ -1,4 +1,4 @@
-package com.example.pract5.ui.stateholder.viewmodel;
+package com.example.pract5;
 
 import android.app.Application;
 
@@ -6,10 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-
-import com.example.pract5.data.models.SupAccount;
-import com.example.pract5.data.protocols.UserAccProtocol;
-import com.example.pract5.data.repositories.UserAccRep;
 
 public class SupVmod extends AndroidViewModel {
 
@@ -33,10 +29,6 @@ public class SupVmod extends AndroidViewModel {
 
     private final MutableLiveData<Boolean> _errorInputEmail = new MutableLiveData<>();
 
-    public LiveData<Boolean> errorInputEmail() {
-        return _errorInputEmail;
-    }
-
     private final MutableLiveData<Boolean> _errorInputPhone = new MutableLiveData<>();
 
     public LiveData<Boolean> errorInputPhone() {
@@ -45,10 +37,8 @@ public class SupVmod extends AndroidViewModel {
 
     public boolean createAccount(String login,
                                  String pass,
-                                 String email,
                                  String phone,
-                                 String name,
-                                 String surname
+                                 String name
     ) {
 
         dbRecord();
@@ -56,17 +46,14 @@ public class SupVmod extends AndroidViewModel {
         boolean fieldsValid = validateInput(
                 login,
                 pass,
-                email,
                 phone
         );
         if (fieldsValid) {
             SupAccount registrationAccount = new SupAccount(
                     login,
                     pass,
-                    email,
                     phone,
-                    name,
-                    surname
+                    name
             );
             return repository.createAccount(registrationAccount);
         }
@@ -79,7 +66,6 @@ public class SupVmod extends AndroidViewModel {
 
     private boolean validateInput(String login,
                                   String pass,
-                                  String email,
                                   String phone
     ) {
         boolean result = true;
@@ -89,10 +75,6 @@ public class SupVmod extends AndroidViewModel {
         }
         if (pass.equals("")) {
             _errorInputPass.setValue(true);
-            result = false;
-        }
-        if (email.equals("")) {
-            _errorInputEmail.setValue(true);
             result = false;
         }
         if (phone.equals("")) {
@@ -108,10 +90,6 @@ public class SupVmod extends AndroidViewModel {
 
     public void resetErrorInputPass() {
         _errorInputPass.setValue(false);
-    }
-
-    public void resetErrorInputEmail() {
-        _errorInputEmail.setValue(false);
     }
 
     public void resetErrorInputPhone() {

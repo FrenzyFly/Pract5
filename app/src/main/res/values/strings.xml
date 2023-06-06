@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Журнал</string>
-    <string name="hint_login">Войти</string>
+    <string name="hint_login">Эл. почта</string>
     <string name="hint_password">Пароль</string>
 
     <string name="warning_fill">Обязательное поле</string>
     <string name="confirm_password">Подтвердить пароль</string>
     <string name="e_mail">Эл. почта</string>
     <string name="your_phone">Номер телефона</string>
-    <string name="name_optional">Имя</string>
+    <string name="name_optional">ФИО</string>
     <string name="surname_optional">Фамилия</string>
 
     <string name="list">Список</string>

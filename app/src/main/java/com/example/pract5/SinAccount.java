@@ -1,4 +1,4 @@
-package com.example.pract5.data.models;
+package com.example.pract5;
 
 public class SinAccount {
     private final String login;
